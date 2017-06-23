@@ -1,0 +1,30 @@
+html, body {
+	text-align: center;
+}
+.highlight {
+	border-left: 3px solid #8282FF;
+}
+
+.formula {
+	margin: 0 auto;
+	display: inline-block;
+	cursor: pointer;
+	background-color: #ffffbf; 
+}
+
+.formula:hover {
+	background-color: #ffff84;
+}
+
+#lat-bar {
+	text-align: left; 
+}
+
+#anbar {
+	border-left: 3px solid #8282FF;
+	/*font-weight: bold;*/
+}
+
+#anotacion {
+	
+}

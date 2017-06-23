@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<!-- AQUÍ VA EL TÍTULO DE LA PÁGINA -->
+    <title>Gráficas | Resonancia Magnética</title>
+
+    <link href="docs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/mineStyle.css" rel="stylesheet">
+    <script src="docs/assets/js/ie-emulation-modes-warning.js"></script>
+    
+    <script src="plotly-latest.min.js"></script>
+
+  </head>
+
+  <!-- EMPIEZA EL DISEÑO 
+    ========================================= -->
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Resonancia Magnética</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Nosotros  </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Índice <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Capítulo 1</a></li>
+              <li><a href="#">Capítulo 2</a></li>
+              <li><a href="#">Capítulo 3</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Animaciones</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Interacciones</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Agradecimientos</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <section class="science-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2>Graficación</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2>Recuperación Transversal</h2>
+          <br>
+          <p>La Recuperación Transversal se calcula de la siguiente manera:</p>
+          
+          <h3>${M_{xy} = M_{0} e^{- \frac{t}{T_{2}}}}$</h3>
+          <br>
+          <div id="plot-longitudinal" style="width:100%;height:300px;"></div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="input-group">
+                <span class="input-group-addon">${M_{0}}$ =</span>
+                <input type="number" id="M0_1" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <span class="input-group-addon">${T_{2}}$ =</span>
+                <input type="number" id="T2" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <span class="input-group-addon">${t}$ =</span>
+                <input type="number" id="time1" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <span class="input-group-addon">Nombre:</span>
+                <input type="text" id="name_1" class="form-control">
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div id="color-images" class="col-md-12">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="calcula btn btn-block btn-large btn-primary">Calcular Recuperación Transversal</button>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- FOOTER -->
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="p-gray">Diseñado y desarrollado por el departamento de Física de la <span style="color: white;">Facultad de Ciencias</span> de la <span style="color: white;">UNAM.</span> <br>2016. Todos los derechos reservados. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="docs/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/scroll.js"></script>
+	<!-- Math stuff -->
+  <script type="text/x-mathjax-config">
+ 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+	</script>
+
+          <script>
+            $(document).ready(function(){
+              LONGI = document.getElementById('plot-longitudinal');
+              Plotly.plot( LONGI, [], {
+                  margin: { t: 0 },
+                xaxis: {
+                  title: 'tiempo',
+                  titlefont: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                  }
+                },
+                yaxis: {
+                  title: 'Mxy',
+                  titlefont: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                  }
+                } } );
+
+              function getRandomIntInclusive(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+              }
+
+              
+
+              $(".calcula").on('click', function(){
+              var mxy = [];
+              var tm = [];
+                var m0_1 = document.getElementById("M0_1").value;
+                var t2 = document.getElementById("T2").value;
+                var time1 = document.getElementById("time1").value;
+                var name_1 = document.getElementById("name_1").value;
+
+                var time_step = time1/49;
+
+                for (var i = 0; i < 50; i++) {
+                  tm.push(time_step * i);
+                  mxy.push(m0_1 * Math.exp(- (time_step * i) / (t2)));
+                };
+
+                var random_color = getRandomIntInclusive(0, 255).toString();
+
+                if (Number(random_color) > 128) {
+                  var text_color = '#333333';
+                } else {
+                  var text_color = 'white';
+                }
+
+                var rgb_append = 'rgb(' + random_color + ',' + random_color + ',' + random_color + ');';
+
+                var rgb_color = '<div class="image-color" style="background-color:' + rgb_append + '; ' + 'color:' + text_color + ' ">' + name_1 + '<br>Escala rgb: ' + random_color + '</div>';
+
+                document.getElementById('color-images').innerHTML += rgb_color;
+
+                LONGI = document.getElementById('plot-longitudinal');
+                Plotly.plot( LONGI, [{
+                x: tm,
+                y: mxy,
+                name: name_1}], {
+                  margin: { t: 0 },
+                xaxis: {
+                  title: 'tiempo',
+                  titlefont: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                  }
+                },
+                yaxis: {
+                  title: 'Mxy',
+                  titlefont: {
+                    family: 'Courier New, monospace',
+                    size: 18,
+                    color: '#7f7f7f'
+                  }
+                } } );
+
+              });
+            })
+          </script>
+
+
+  </body>
+</html>

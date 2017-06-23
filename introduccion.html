@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<!-- AQUÍ VA EL TÍTULO DE LA PÁGINA -->
+    <title>Introducción | Resonancia Magnética</title>
+
+    <link href="docs/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="css/mineStyle.css" rel="stylesheet">
+    <script src="docs/assets/js/ie-emulation-modes-warning.js"></script>
+    
+  
+  </head>
+
+  <!-- EMPIEZA EL DISEÑO 
+    ========================================= -->
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Resonancia Magnética</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Nosotros  </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Índice <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Capítulo 1</a></li>
+              <li><a href="#">Capítulo 2</a></li>
+              <li><a href="#">Capítulo 3</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Animaciones</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Interacciones</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Acerca de</a></li>
+          <li><a href="#">Agradecimientos</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+
+
+  <section class="science-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>Introducción</h1>
+          <h2 id="Vectores" class="target">Sistemas de Resonancia Magnética en la Facultad de Ciencias</h2>
+          
+          <p> Los sistemas de generación de imágenes utilizados en la actualidad son sofisticados y costosos. Para los estudiantes que no están en una licenciatura en salud es casi imposible que puedan tener lecciones y prácticas con esta clase de equipos. Recientemente la facultad de ciencias de la UNAM, adquirió dos equipos de RM tanto para generar imágenes como espectros con campo magnéticos bajos. Los sistemas de adquisición por resonancia magnética (RM) son equipos muy complejos cuya operación debe ser evaluada sistemáticamente bajo esquemas establecidos. Estos permiten adquirir señales de RM con las cuales se pueden generar imágenes o señales de espectroscopia, que se utilizan en la caracterización de diversos materiales y sustancias. Uno de los sistemas puede emplear el campo magnético de la tierra para generar imágenes (Sistema IRM TERRANOVA) y el otro hace uso de un campo magnético de 1 Tesla para espectroscopia de protones principalmente (Sistema NMR SPINSOLVE). Las imágenes que se generan pueden ser estáticas o funcionales. Las estáticas son imágenes que ofrecen información de la composición interna de un objeto (muy similar a los rayos X) y las funcionales son imágenes que ofrecen información sobre la actividad específica del objeto bajo estudio. La espectroscopia por resonancia magnética se diferencia de la RM convencional en la forma en que presenta la información, en lugar de una imagen se presenta un espectro de componentes bioquímicos del objeto bajo estudio. </p>
+        
+          <br>
+          <h2 id="Protones" class="target">Sistemas de Generación de Imágenes por Resonancia Magnética</h2>
+
+          <p>La técnica de Resonancia Magnética, es una de las modalidades de adquisición de imagen que ha evolucionado desde el uso de ultra-bajos a ultra-altos campos magnéticos estáticos, así como el proceso de digitalización, por lo que la técnica de generación de imagen se ha vuelto más complejo. Las bases teóricas, sin embargo, son las mismas desde que en los 80, Paul Lauterbur y Peter Mansfield, galardonados en el 2003 con el Premio Nobel de Medicina, permitieron el uso del fenómeno de la Resonancia Magnética para producir imágenes [1,2]. En la actualidad los campos magnéticos empleados son del orden de 0.02 Tesla (ultra-bajos campos magnéticos) a los 9.4 Tesla (ultra-altos campos magnéticos) [3]. Los sistemas de IRM cuentan con antenas de radiofrecuencia, las cuales son usadas para emitir y recibir energía y señales de resonancia magnética. Otro elemento importante son las variaciones locales en el campo magnético estático producidas por los gradientes. La imagen generada por estos sistemas está directamente relacionada con la señal de RM. En general, es dependiente de parámetros intrínsecos como la densidad de espines, tiempos de relajación y efectos de susceptibilidad magnética. Así, la imagen de una misma sección de una muestra puede ser tan nítida o a la vez no, debido a la combinación de los parámetros mencionados anteriormente.
+			</p>
+       
+          <br>
+          <h2 id="Campos" class="target">El Origen de la Imagen por Resonancia Magnética</h2>
+
+          <p>Para entender el fenómeno de la señal de RM y la generación de imágenes por RM (IRM) es necesario estudiar el comportamiento de los núcleos, y algunas de sus propiedades. El núcleo tiene una masa con uno o más niveles de la energía (dependiendo de la clase del elemento empleado) y poseen un momento angular intrínseco llamado espín. El espín I esta cuantizado para ciertos valores discretos. Estos valores dependen del número atómico y del peso atómico de cada núcleo. Se tienen básicamente tres grupos de valores para I: cero, valores medios y valores enteros. El caso que interesa en IRM es cuando se tienen valores medios de I (p. ej. 1/2, 3/2, 5/2). Para entender el proceso de RM podemos hablar del núcleo de hidrógeno, en específico de los protones del núcleo de hidrógeno (La subpartícula del núcleo atómico de mayor importancia en IRM). El núcleo de hidrogeno (1H) es la elección más simple, debido a que tiene un espín I cuyo valor es ½ y es el isotopo más abundante, y además al estar compuestos los tejidos del cuerpo humano de este material, lo hacen el núcleo de elección para la adquisición de imágenes por RM. Para entender el origen de la señal por RM, es necesario emplear los principios de la mecánica cuántica, pero también la mayoría de los conceptos empleados, se pueden analizar con la ayuda de la mecánica clásica [4].
+          </p><br>
+          <p>Un núcleo que está girando actúa como un dipolo magnético (a menudo llamado espín nuclear), orientado en la dirección del eje de rotación. Cualquier sistema de espines posee un momento magnético $\vec{\mu}$. El momento magnético es paralelo a su eje de rotación. Si  $\vec{\mu}$ es expuesto a un campo magnético estático $\vec{B_{0}}$, es capaz de alinearse en la dirección del campo estático de manera paralela o antiparalela. La posición paralela es la más común debido a que se requiere menor energía para alinear un núcleo en esa dirección, por lo que hay un número ligeramente mayor de núcleos alineados en el sentido del campo magnético. Entre las posiciones de los núcleos alineados en forma paralela y antiparalela existe una diferencia de energía y se utiliza para detectar la señal de resonancia magnética.  La orientación del espín nuclear y la manipulación del momento magnético debido a ciertos procesos experimentales es lo que da origen a la señal de RM.</p>
+          <br>
+          <img src="media/image1.png" class="img-responsive" style="float: left; margin-right: 10px; width: 200px;" alt="">
+          <p>El campo $\vec{B_{0}}$ produce un torque, $\vec{\tau} =  \vec{\mu} \times \vec{B_{0}}$ , por el momento magnético del dipolo del núcleo. Este torque, comienza normal al momento angular del vector $\vec{\mu}$, cambiando continuamente la dirección de giro, haciendo que el momento nuclear precese alrededor de $\vec{B_{0}}$. Usando las definiciones anteriores, el resultado puede escribirse como: </p>
+
+           <div class="formula" id="1">$$\frac{d\vec{\mu}}{dt} = -\gamma\vec{B_{0}} \times \vec{\mu}$$
+           </div>
+
+		  <p>
+          y significa que el componente del momento magnético nuclear $\vec{\mu}$ perpendicular al campo magnético $\vec{B_{0}}$ rota alrededor de él, con una frecuencia angular dada por la relación de <i>Larmor:</i> </p>
+          <div class="formula" id="2">$\omega=\gamma\mid B_{0} \mid$ </div>
+          <p> donde $\gamma$ es la constante de radio giromagnética del núcleo de interés. En el agua, el protón hidrogeno tiene un valor aproximado de $2.68x10^{8}$ rad/s/Tesla (por lo que $=\gamma/2\pi$ es 42.6 MHz/Tesla).
+          </p>
+          <div class="formula" id="3">$a \ne 1$</div>
+          <br>
+          <p>En medicina y en particular en IRM el término vóxel se usa para referirse a un volumen elemental de tejido, idealmente homogéneo en composición, cuya densidad de magnetización del protón puede ser representada por el brillo del pixel en la imagen. En este volumen se encuentran momentos <img src="media/image3.png" class="img-responsive" style="float:left; margin-right:10px; width:300px;" alt=""> magnéticos nucleares, debido a que se compone de una gran cantidad de moléculas abarcando algunos núcleos de hidrógeno, en donde cada uno tiene un momento magnético $\vec{\mu}$, cuya suma de momentos entre unidad de volumen se define como magnetización ($\vec{M}$). Si el campo magnético no está presente, el momento magnético puede ser orientado aleatoriamente los espines están en estado de equilibrio y si los comparamos a cada uno de ellos como un vector, entonces tendrán una dirección diferente entre cada uno de ellos por lo que la magnetización neta será cero. Cuando el campo magnético estático es aplicado, el sistema de espines genera una magnetización neta que estará orientada en la dirección del campo magnético y tendrá dos componentes: magnetización longitudinal y magnetización transversal.</p>
+          
+          <br>
+          <h2 id="gradientes" class="target">ANIMACIÓN 1</h2>
+
+<div class="row">
+  <div class="col-md-6">
+              
+            
+        <!-- SVG 1 -->
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<g id="Vectores">
+  <g id="animacion-1">
+    <rect id="XMLID_43_" x="100.312" y="205.18" style="fill:none;" width="7.86" height="9.289"/>
+    <text id="XMLID_44_" transform="matrix(1 0 0 1 100.3115 213.7004)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+    <rect id="XMLID_46_" x="156.544" y="31.242" style="fill:none;" width="6.42" height="9.857"/>
+    <text id="XMLID_45_" transform="matrix(1 0 0 1 156.5439 39.7618)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+    <rect id="XMLID_48_" x="266.578" y="144.405" style="fill:none;" width="7.86" height="11.19"/>
+    <text id="XMLID_47_" transform="matrix(1 0 0 1 266.5778 152.925)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+    <g id="ejes_2_">
+      <polygon id="ejeZ" style="fill:#010202;" points="153.914,39.56 150,32.781 146.086,39.56 149.527,39.56 149.527,150 
+        150.474,150 150.474,39.56       "/>
+      <polygon id="ejeY" style="fill:#010202;" points="264.819,150 258.04,146.086 258.04,149.526 150,149.526 150,150.474 
+        258.04,150.474 258.04,153.914       "/>
+      <polygon id="ejeX" style="fill:#010202;" points="150.269,150.269 149.731,149.731 99.294,200.167 96.747,197.62 94.721,205.18 
+        102.282,203.154 99.833,200.705      "/>
+    </g>
+    <g class="vector1" id="vector">
+      
+        <rect id="XMLID_8_" x="168.24" y="72.041" transform="matrix(-0.8911 -0.4538 0.4538 -0.8911 267.6545 290.7615)" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+      <polygon id="XMLID_9_" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" points="190.347,70.085 
+        183.895,74.516 190.959,77.888       "/>
+    </g>
+    <ellipse class="elipse" id="elipse" style="fill:none;stroke:#3C63AD;stroke-miterlimit:10;" cx="150.263" cy="70.085" rx="40.696" ry="15.804"/>
+  </g>
+</g>
+</svg>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <p>Frecuencia de precesión = ${\gamma}$ ${B_{0}}$<br>
+        donde ${\gamma}$ = 42.54 <br>
+        ${B_{0}}$ = <span id="bo-1">1</span></p>
+      </div>
+      <br>
+      <p>Ajusta el valor de ${B_{0}}$ y visualiza el cambio en el torque:</p>
+      <div class="input-group">
+        <span class="input-group-addon">${B_{0}}$ =</span>
+        <input type="number" id="speed" class="form-control">
+        <span class="input-group-btn">
+          <button class="calcula btn btn-info">Cambiar</button>
+        </span>
+      </div>
+    <br><br>
+      <p style="text-align: center;">${\tau}$ = ${\frac{1}{\gamma {B_{0}}}}$ = <span id="frec-prec">0.023507</span> MHz</p>
+  </div>
+</div>
+
+                  
+
+
+
+          <br><br>
+
+          <h2>ANIMACIÓN 2</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+    <g id="Capa_2">
+      <g id="animacion-2">
+        <rect id="XMLID_61_" x="100.232" y="205.18" style="fill:none;" width="7.86" height="9.289"/>
+        <text id="XMLID_60_" transform="matrix(1 0 0 1 100.2323 213.7004)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+        <rect id="XMLID_59_" x="156.465" y="31.242" style="fill:none;" width="6.42" height="9.857"/>
+        <text id="XMLID_58_" transform="matrix(1 0 0 1 156.4647 39.7618)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+        <rect id="XMLID_57_" x="266.499" y="144.405" style="fill:none;" width="7.86" height="11.19"/>
+        <text id="XMLID_56_" transform="matrix(1 0 0 1 266.4986 152.925)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+        <g id="ejes">
+          <polygon id="ejeZ_1_" style="fill:#010202;" points="153.834,39.56 149.921,32.781 146.007,39.56 149.447,39.56 149.447,150 
+            150.395,150 150.395,39.56       "/>
+          <polygon id="ejeY_1_" style="fill:#010202;" points="264.74,150 257.961,146.086 257.961,149.526 149.921,149.526 
+            149.921,150.474 257.961,150.474 257.961,153.914       "/>
+          <polygon id="ejeX_1_" style="fill:#010202;" points="150.19,150.269 149.652,149.731 99.215,200.167 96.668,197.62 
+            94.642,205.18 102.203,203.154 99.754,200.705      "/>
+        </g>
+        <g class="vector2" id="vector-2">
+          
+            <rect id="XMLID_55_" x="149.802" y="67.763" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+          <polygon id="XMLID_54_" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" points="150.026,60.692 
+            146.278,67.563 154.103,67.374       "/>
+        </g>
+        <path class="espiral-2" id="espiral-2" style="fill:none;stroke:#3C63AD;stroke-width:0.9609;stroke-miterlimit:10;" d="M154.574,166.412
+          c-38.95,0-70.525-4.837-70.525-13.251c0-7.573,28.417-12.879,63.472-14.972c31.549-1.884,57.125,0.757,57.125,5.183
+          c0,3.983-23.018,6.172-51.412,2.935c-25.555-2.914-46.271-10.346-46.271-17.54c0-6.408,18.268-13.117,40.945-16.753
+          c0.232-0.037,0.465-0.074,0.699-0.111c20.699-3.251,37.48-3.123,37.48-0.533c0,2.332-15.102,2.536-33.732-0.868
+          c-16.767-3.064-30.359-8.635-30.359-13.402c0-4.218,11.825-9.05,26.564-11.722c0.252-0.046,0.505-0.091,0.759-0.136
+          c13.581-2.4,24.59-2.738,24.59-0.902c0,1.652-9.909,1.452-22.131-1.225c-11.001-2.409-19.918-6.248-19.918-9.213
+          c0-2.668,8.026-6.04,17.926-7.808c8.91-1.591,16.134-1.249,16.134,0.194c0,1.299-6.501,1.653-14.52,0.866
+          c-7.217-0.708-13.068-2.218-13.068-3.761c0-1.389,5.266-2.702,11.762-2.702"/>
+      </g>
+    </g>
+    </svg>
+  </div>
+  <div class="col-md-6">
+    <div>
+      <p>Frecuencia de precesión = ${\gamma}$ ${B_{0}}$<br>
+      donde ${\gamma}$ = 42.54 <br>
+      ${B_{0}}$ = <span id="bo-2">1</span></p>
+    </div>
+    <br>
+    <p>Ajusta el valor de ${B_{0}}$ y visualiza el cambio en el torque:</p>
+    <div class="input-group">
+      <span class="input-group-addon">${B_{0}}$ =</span>
+      <input type="number" id="speed-2" class="form-control">
+      <span class="input-group-btn">
+        <button class="calcula-2 btn btn-info">Cambiar</button>
+      </span>
+    </div>
+    <br><br>
+    <p style="text-align: center;">${\tau}$ = ${\frac{1}{\gamma {B_{0}}}}$ = <span id="frec-prec-2">0.023507</span> MHz</p>
+    </div>
+</div>
+          <br><br>
+<!--
+          <h2>ANIMACIÓN 3</h2>
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<g id="Capa_3">
+  <g id="animacion-3">
+    <rect id="XMLID_209_" x="100.048" y="205.18" style="fill:none;" width="7.86" height="9.289"/>
+    <text id="XMLID_208_" transform="matrix(1 0 0 1 100.0474 213.7004)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+    <rect id="XMLID_207_" x="156.28" y="31.242" style="fill:none;" width="6.42" height="9.857"/>
+    <text id="XMLID_206_" transform="matrix(1 0 0 1 156.2798 39.7618)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+    <rect id="XMLID_205_" x="266.314" y="144.405" style="fill:none;" width="7.86" height="11.19"/>
+    <text id="XMLID_204_" transform="matrix(1 0 0 1 266.3138 152.925)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+    <g id="ejes_1_">
+      <polygon id="ejeZ_2_" style="fill:#010202;" points="153.65,39.56 149.736,32.781 145.822,39.56 149.262,39.56 149.262,150 
+        150.21,150 150.21,39.56       "/>
+      <polygon id="ejeY_2_" style="fill:#010202;" points="264.555,150 257.776,146.086 257.776,149.526 149.736,149.526 
+        149.736,150.474 257.776,150.474 257.776,153.914       "/>
+      <polygon id="ejeX_2_" style="fill:#010202;" points="150.005,150.269 149.467,149.731 99.03,200.167 96.483,197.62 
+        94.457,205.18 102.018,203.154 99.569,200.705      "/>
+    </g>
+    <g id="vector-3">
+      
+        <rect id="XMLID_203_" x="149.617" y="67.763" style="fill:#3C63AD;stroke:#3C63AD;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+      <polygon id="XMLID_202_" style="fill:#3C63AD;stroke:#3C63AD;stroke-width:0.9472;stroke-miterlimit:10;" points="
+        149.841,60.692 146.093,67.563 153.918,67.374      "/>
+    </g>
+  </g>
+  <path class="doble-espiral" id="doble-espiral" style="fill:none;stroke:#E52420;stroke-width:0.9609;stroke-miterlimit:10;" d="M150.227,60.692
+    c-6.496,0-11.762,1.313-11.762,2.702c0,1.543,5.851,3.053,13.068,3.761c8.019,0.787,14.52,0.433,14.52-0.866
+    c0-1.444-7.223-1.785-16.134-0.194c-9.9,1.768-17.926,5.14-17.926,7.808c0,2.965,8.918,6.804,19.918,9.213
+    c12.223,2.676,22.131,2.877,22.131,1.225c0-1.836-11.01-1.498-24.59,0.902c-0.254,0.045-0.507,0.09-0.759,0.136
+    C133.955,88.05,122.13,92.882,122.13,97.1c0,4.767,13.592,10.339,30.359,13.402c18.63,3.404,33.732,3.2,33.732,0.868
+    c0-2.591-16.78-2.719-37.48,0.533c-0.233,0.037-0.466,0.074-0.699,0.111c-22.677,3.637-40.945,10.345-40.945,16.753
+    c0,7.193,20.716,14.626,46.271,17.54c28.394,3.237,51.412,1.048,51.412-2.935c0-4.426-25.576-7.066-57.125-5.183
+    c-35.055,2.093-63.472,7.399-63.472,14.972c0,8.414,26.419,13.251,65.369,13.251c0,0,0.444,0,0.887,0
+    c31.549,1.884,54.341-0.853,54.341-5.278c0-3.983-23.018-6.172-51.412-2.935c-25.555,2.914-46.271,10.346-46.271,17.54
+    c0,6.408,18.268,13.117,40.945,16.753c0.232,0.037,0.465,0.074,0.699,0.111c20.699,3.251,37.48,3.123,37.48,0.533
+    c0-2.332-15.102-2.536-33.732,0.868c-16.767,3.064-30.359,8.635-30.359,13.402c0,4.218,11.825,9.05,26.564,11.722
+    c0.252,0.046,0.505,0.091,0.759,0.136c13.581,2.4,24.59,2.738,24.59,0.902c0-1.652-9.909-1.452-22.131,1.225
+    c-11.001,2.409-19.918,6.248-19.918,9.213c0,2.669,8.026,6.04,17.926,7.808c8.91,1.591,16.134,1.249,16.134-0.194
+    c0-1.299-6.501-1.653-14.52-0.866c-7.217,0.708-13.068,2.218-13.068,3.761c0,1.389,5.266,2.702,11.762,2.702"/>
+</g>
+</svg>
+
+-->
+
+<br><br>
+<h2>Animación Triple</h2>
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 600 200" style="enable-background:new 0 0 600 200;" xml:space="preserve">
+
+<g id="Capa_2">
+  <rect id="XMLID_61_" x="-557.175" y="155.18" style="fill:none;" width="7.86" height="9.289"/>
+  <text id="XMLID_60_" transform="matrix(1 0 0 1 -557.1757 163.7004)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+  <rect id="XMLID_59_" x="-500.943" y="-18.758" style="fill:none;" width="6.42" height="9.857"/>
+  <text id="XMLID_58_" transform="matrix(1 0 0 1 -500.9432 -10.2382)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+  <rect id="XMLID_57_" x="-390.909" y="94.405" style="fill:none;" width="7.86" height="11.19"/>
+  <text id="XMLID_56_" transform="matrix(1 0 0 1 -390.9093 102.925)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+  <g id="TRIADA">
+    <g id="triada-1">
+      <rect id="XMLID_89_" x="25.417" y="184.577" style="fill:none;" width="7.86" height="9.289"/>
+      <text id="XMLID_88_" transform="matrix(1 0 0 1 25.4172 193.0969)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+      <rect id="XMLID_1469_" x="81.65" y="10.638" style="fill:none;" width="6.42" height="9.857"/>
+      <text id="XMLID_1468_" transform="matrix(1 0 0 1 81.6497 19.1583)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+      <rect id="XMLID_1467_" x="191.684" y="123.801" style="fill:none;" width="7.86" height="11.19"/>
+      
+        <text id="XMLID_1466_" transform="matrix(1 0 0 1 191.6836 132.3215)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+      <g id="ejes_3_">
+        <polygon id="ejeZ_3_" style="fill:#010202;" points="79.019,18.956 75.106,12.178 71.192,18.956 74.632,18.956 74.632,129.397 
+          75.58,129.397 75.58,18.956        "/>
+        <polygon id="ejeY_3_" style="fill:#010202;" points="189.925,129.397 183.146,125.483 183.146,128.923 75.106,128.923 
+          75.106,129.87 183.146,129.87 183.146,133.31         "/>
+        <polygon id="ejeX_3_" style="fill:#010202;" points="75.375,129.666 74.837,129.127 24.4,179.563 21.853,177.016 
+          19.827,184.577 27.388,182.551 24.939,180.102        "/>
+      </g>
+      <g id="vector-2_1_" class="vector2">
+        
+          <rect id="XMLID_1465_" x="74.987" y="47.16" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+        <polygon id="XMLID_1464_" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" points="
+          75.211,40.088 71.463,46.96 79.288,46.77         "/>
+      </g>
+      <path id="espiral-2_1_" class="espiral-2" style="fill:none;stroke:#3C63AD;stroke-width:0.9609;stroke-miterlimit:10;" d="M79.759,145.808
+        c-38.95,0-70.525-4.837-70.525-13.251c0-7.573,28.417-12.879,63.472-14.972c31.549-1.884,57.125,0.757,57.125,5.183
+        c0,3.983-23.018,6.172-51.412,2.935c-25.555-2.914-46.271-10.346-46.271-17.54c0-6.408,18.268-13.117,40.945-16.753
+        c0.232-0.037,0.465-0.074,0.699-0.111c20.699-3.251,37.48-3.123,37.48-0.533c0,2.332-15.102,2.536-33.732-0.868
+        c-16.767-3.064-30.359-8.635-30.359-13.402c0-4.218,11.825-9.05,26.564-11.722c0.252-0.046,0.505-0.091,0.759-0.136
+        c13.581-2.4,24.59-2.738,24.59-0.902c0,1.652-9.909,1.452-22.131-1.225c-11.001-2.409-19.918-6.248-19.918-9.213
+        c0-2.668,8.026-6.04,17.926-7.808c8.91-1.591,16.134-1.249,16.134,0.194c0,1.299-6.501,1.653-14.52,0.866
+        c-7.217-0.708-13.068-2.218-13.068-3.761c0-1.389,5.266-2.702,11.762-2.702"/>
+    </g>
+    <g id="triada-2">
+      <rect id="XMLID_2315_" x="216.766" y="184.577" style="fill:none;" width="7.86" height="9.289"/>
+      
+        <text id="XMLID_2314_" transform="matrix(1 0 0 1 216.7654 193.0969)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+      <rect id="XMLID_2313_" x="270.931" y="10.638" style="fill:none;" width="6.42" height="9.857"/>
+      <text id="XMLID_2312_" transform="matrix(1 0 0 1 270.9307 19.1583)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+      <rect id="XMLID_2311_" x="383.032" y="123.801" style="fill:none;" width="7.86" height="11.19"/>
+      
+        <text id="XMLID_2310_" transform="matrix(1 0 0 1 383.0317 132.3215)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+      <g id="ejes_4_">
+        <polygon id="ejeZ_4_" style="fill:#010202;" points="268.301,18.956 264.387,12.178 260.473,18.956 263.913,18.956 
+          263.913,129.397 264.861,129.397 264.861,18.956        "/>
+        <polygon id="ejeY_4_" style="fill:#010202;" points="379.206,129.397 372.427,125.483 372.427,128.923 264.387,128.923 
+          264.387,129.87 372.427,129.87 372.427,133.31        "/>
+        <polygon id="ejeX_4_" style="fill:#010202;" points="264.656,129.666 264.118,129.127 213.681,179.563 211.134,177.016 
+          209.108,184.577 216.669,182.551 214.22,180.102        "/>
+      </g>
+      <g id="vector-2_2_" class="vector-z-triada">
+        
+          <rect id="XMLID_2309_" x="264.268" y="47.16" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+        <polygon id="XMLID_2308_" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" points="
+          264.492,40.088 260.744,46.96 268.569,46.77        "/>
+      </g>
+    </g>
+    <g id="triada-3">
+      <rect id="XMLID_2323_" x="420.351" y="184.577" style="fill:none;" width="7.86" height="9.289"/>
+      
+        <text id="XMLID_2322_" transform="matrix(1 0 0 1 420.3508 193.0969)" style="font-family:'MyriadPro-Regular'; font-size:12px;">x</text>
+      <rect id="XMLID_2321_" x="476.583" y="10.638" style="fill:none;" width="6.42" height="9.857"/>
+      <text id="XMLID_2320_" transform="matrix(1 0 0 1 476.5833 19.1583)" style="font-family:'MyriadPro-Regular'; font-size:12px;">z</text>
+      <rect id="XMLID_2319_" x="586.617" y="123.801" style="fill:none;" width="7.86" height="11.19"/>
+      
+        <text id="XMLID_2318_" transform="matrix(1 0 0 1 586.6172 132.3215)" style="font-family:'MyriadPro-Regular'; font-size:12px;">y</text>
+      <g id="ejes_5_">
+        <polygon id="ejeZ_5_" style="fill:#010202;" points="473.953,18.956 470.039,12.178 466.126,18.956 469.566,18.956 
+          469.566,129.397 470.513,129.397 470.513,18.956        "/>
+        <polygon id="ejeY_5_" style="fill:#010202;" points="584.858,129.397 578.08,125.483 578.08,128.923 470.04,128.923 
+          470.04,129.87 578.08,129.87 578.08,133.31         "/>
+        <polygon id="ejeX_5_" style="fill:#010202;" points="470.309,129.666 469.771,129.127 419.334,179.563 416.786,177.016 
+          414.761,184.577 422.321,182.551 419.872,180.102         "/>
+      </g>
+      <g id="vector-2_3_" class="vector-xy-triada">
+        
+          <rect id="XMLID_2317_" x="499.006" y="117.917" transform="matrix(0.7081 -0.7061 0.7061 0.7081 33.4204 399.1319)" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" width="0.947" height="82.451"/>
+        <polygon id="XMLID_2316_" style="fill:#CD3333;stroke:#CD3333;stroke-width:0.9472;stroke-miterlimit:10;" points="
+          533.807,193.117 531.599,185.608 526.199,191.275         "/>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>
+
+
+          <p>Para generar las imágenes por RM es necesario también aplicar campos magnéticos que varían con el tiempo conocidos como gradientes de campo magnético, estos gradientes son pequeñas perturbaciones que se añaden al campo B0, causando una perturbación menor al 1%. Un gradiente unidimensional es una variación con respecto a una dirección, mientras que un gradiente bidimensional es una variación en dos direcciones. En general, existen tres gradientes principales dentro del sistema de IRM: gradiente selector de corte (o rebanada), gradiente de codificación en fase y gradiente de codificación en frecuencia (o lectura). </p>
+          <br>
+          <p>El primer paso para determinar la localización de la magnetización  de la región de la cual queremos generar una imagen, consiste en asegurarnos de que la señal neta que se detecta en la antena proviene de un corte específico de la región de interés. En otras palabras, nos interesa crear magnetización transversal exclusivamente en un corte o de una rebanada. Para esto, de algún modo hay que lograr que el pulso de RF solo entre en resonancia con la magnetización que reside en dicho corte. Esto se puede conseguir con la ayuda de un gradiente. En IRM se utiliza la dependencia entre la frecuencia con el campo para ubicar espacialmente las señales en diferentes regiones del espacio. El campo magnético resultante es dependiente de la localización en el campo magnético estático y se puede expresar de la siguiente forma:
+          Bi=B0+(GT.ri)                       (3)
+          <img src="media/image6.png" class="img-responsive" style="float:left; margin-right:10px; width:450px;" alt=""> donde 𝐵𝑖 es el gradiente de campo magnético en la localización ri y 𝐺𝑇 es la magnitud de este campo magnético y a partir de la Ec. 3 podemos observar que el gradiente es una variación del campo magnético en función de la posición. 
+          La selección de corte se logra al combinar los pulsos de RF y el gradiente de selección de corte (selección del plano tomográfico). El pulso de RF tiene un ancho de banda de frecuencias vecinas a la frecuencia de excitación. Considerando la acción del gradiente de campo magnético, podemos replantear la expresión de la frecuencia de Larmor de la siguiente manera:
+           ωi=γ B0+GT.ri                    (4) 
+          Donde ωi es la frecuencia de los protones en la posición  ri. Al combinar el pulso de RF con el gradiente se logra la localización espacial, ya que solo se excitan solo los protones deseados. Incluso dentro del vóxel, al tener los núcleos distintas frecuencias de resonancia pueden ser excitados selectivamente.
+          </p><br>
+          <p>El gradiente de codificación de fase Bp es un gradiente del campo magnético variable  y se utiliza para incorporar una fase específica al ángulo del vector de magnetización transversal. La fase específica del ángulo dependerá de la ubicación del vector de magnetización transversal. El gradiente de codificación lectura Bf  se aplica durante la adquisición de la señal, por lo que recibe el nombre de “gradiente de lectura” y permite que los espines experimenten diferentes campos magnéticos en función de su posición a lo largo de su dirección de aplicación.</p>
+        </div>
+        
+        <!-- BARRA LATERAL 
+        <div class="hidden-xs hidden-sm col-md-3 fixed-index" id="lat-bar">
+          <ul class="list-group">
+            <li class="list-group-item list-header">En este capítulo:</li>
+            <a class="list-group-item" href="#Vectores" >Sistemas de Resonancia Magnética en la Facultad de Ciencias</a>
+            <a class="list-group-item" href="#Protones" >Sistemas de Generación de Imágenes por Resonancia Magnética</a>
+            <a class="list-group-item" href="#Campos">El Origen de la Imagen por Resonancia Magnética</a>
+            <a class="list-group-item" href="#gradientes">Gradientes del Campo Magnético y la Codificación de la Señal RM</a>
+          </ul>
+          
+        </div>
+		-->
+    		<!-- Barra de anotaciones (No visible) 
+    		<div class="hidden-xs hidden-sm col-md-3 fixed-index" hidden="true" id="anbar">
+    			
+    		</div>
+-->
+      </div>
+      <br>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p class="p-gray">Diseñado y desarrollado por el departamento de Física de la <span style="color: white;">Facultad de Ciencias</span> de la <span style="color: white;">UNAM.</span> <br>2016. Todos los derechos reservados. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<!-- JAVASCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="docs/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/scroll.js"></script>
+	<!-- Math stuff -->
+  <script type="text/x-mathjax-config">
+ 		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script type="text/javascript" async
+	  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+	</script>
+
+  <script>
+    $(document).ready(function(){
+
+      $(".calcula").on('click', function(){
+        var velocidad = document.getElementById("speed").value;
+        document.getElementById("vector").style.animationDuration= "" + velocidad + "s";
+        document.getElementById("elipse").style.animationDuration= "" + velocidad + "s";
+        document.getElementById("frec-prec").innerHTML = ' ' + (1/(42.54*velocidad));
+        document.getElementById("bo-1").innerHTML = ' ' + (velocidad);
+      });
+
+      $(".calcula-2").on('click', function(){
+        var velocidad = document.getElementById("speed-2").value;
+        document.getElementById("vector-2").style.animationDuration= "" + velocidad + "s";
+        document.getElementById("espiral-2").style.animationDuration= "" + velocidad + "s";
+        document.getElementById("frec-prec-2").innerHTML = ' ' + (1/(42.54*velocidad));
+        document.getElementById("bo-2").innerHTML = ' ' + (velocidad);
+      });
+    })
+  </script>
+  </body>
+</html>
