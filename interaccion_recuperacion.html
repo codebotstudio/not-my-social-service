@@ -94,7 +94,7 @@
               </div>
               <div class="row">
                 <div class="col-md-12">
-                  <button id="genera-animacion" class="gen-anim btn btn-block btn-large btn-success hidden">Ver Animación</button>
+                  <button id="genera-animacion" class="gen-anim btn btn-block btn-large btn-success hidden">Ver Contrastes</button>
                   <br>
                 </div>
               </div>
@@ -129,11 +129,11 @@
 <g id="Cambios_x5F_Color">
   <rect id="XMLID_9_" x="83.637" y="58.276" width="222.113" height="258.026"/>
   
-    <ellipse id="Circulo_x5F_A" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="193.669" cy="186.765" rx="100.563" ry="118.726"/>
+    <ellipse id="Circulo_A" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="193.669" cy="186.765" rx="100.563" ry="118.726"/>
   
-    <ellipse id="Circulo_x5F_B" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="243.729" cy="188.957" rx="33.669" ry="84.468"/>
+    <ellipse id="Circulo_B" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="243.729" cy="188.957" rx="33.669" ry="84.468"/>
   
-    <ellipse id="Circulo_x5F_C" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="142.723" cy="166.904" rx="23.922" ry="45.338"/>
+    <ellipse id="Circulo_C" style="fill:#FFFFFF;stroke:#333333;stroke-width:2;" cx="142.723" cy="166.904" rx="23.922" ry="45.338"/>
   <rect id="XMLID_8_" x="187.024" y="103.614" width="7.67" height="129.013"/>
   <rect id="XMLID_3_" x="152.557" y="251.796" style="fill:none;" width="28.177" height="27.238"/>
   <text id="Leyenda_x5F_A" transform="matrix(1 0 0 1 158.7711 270.1702)" style="font-family:'AkkoPro-Bold'; font-size:25px;">A</text>
@@ -152,17 +152,6 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h2>Escala de Grises Recuperación Longitudinal</h2>
-          <br><br>
-          <div class="row">
-            <h1>LOOOOOL 222222</h1>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -218,9 +207,20 @@
 
 
               $(".gen-anim").on('click', function(){
-                
-              });
+                var data = document.getElementById('plot-transversal').data;
+                var max = obtenMayor();
+                var aColor = parseInt(calculaColor(max, parseFloat(data[0].m0)));
+                var bColor = parseInt(calculaColor(max, parseFloat(data[1].m0)));
+                var cColor = parseInt(calculaColor(max, parseFloat(data[2].m0)));
 
+                var circuloA = document.getElementById("Circulo_A");
+                var circuloB = document.getElementById("Circulo_B");
+                var circuloC = document.getElementById("Circulo_C");
+
+                circuloA.style.fill = "rgb(" + aColor + "," + aColor + "," + aColor + ")";
+                circuloB.style.fill = "rgb(" + bColor + "," + bColor + "," + bColor + ")";
+                circuloC.style.fill = "rgb(" + cColor + "," + cColor + "," + cColor + ")";
+              });
 
 
               $(".resetea").on('click', function(){
@@ -233,12 +233,23 @@
                 for(var i = 0; i < 3; i++){
                   Plotly.deleteTraces('plot-transversal', 0);
                 }
+
+                var circuloA = document.getElementById("Circulo_A");
+                var circuloB = document.getElementById("Circulo_B");
+                var circuloC = document.getElementById("Circulo_C");
+
+                circuloA.style.fill = "rgb(255,255,255)";
+                circuloB.style.fill = "rgb(255,255,255)";
+                circuloC.style.fill = "rgb(255,255,255)";
+
+                document.getElementById("M0_2").value = "";
+                document.getElementById("T1").value = "";
+                document.getElementById("time2").value = "";
+
               });
 
-              function generarAnimacion(){
-                var data = document.getElementById('plot-transversal').data;
-                var max = obtenMayor();
-
+              function calculaColor(max, este){
+                return (este * 255) / max;
               }
 
               function obtenMayor(){
