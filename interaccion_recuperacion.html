@@ -143,10 +143,11 @@
                 <text id="Leyenda_x5F_B" transform="matrix(1 0 0 1 236.0664 199.7339)" style="font-family:'AkkoPro-Bold'; font-size:25px;">B</text>
               </g>
               </svg>
-
-              <input type="range" id="colorRange" value="2" min="0" max="4" class="hidden range-color">
-              <p id="infoPorcentaje" class="text-center">Lol</p>
-
+              <div class="text-center">
+                <p id="leyendaPorcentaje" class="hidden" style="text-align:center;">Porcentaje de ... </p>
+                <input type="range" id="colorRange" value="2" min="0" max="4" class="hidden range-color">
+                <p id="infoPorcentaje" class="hidden" style="text-align:center;">50%</p>
+              </div>
             </div>
           </div>
           <br>
@@ -212,38 +213,24 @@
 
               /*
               *
-              * ARREGLAR ESTOOOOO
+              * ARREGLAR ESTOOOOO --- ARREGLADO
               *
               */
               $(".range-color").on('change', function(){
                 var position = $(this).val();
-                switch (position) {
-                  case 0:
-                    document.getElementById('infoPorcentaje').innerHTML = "0% del tiempo";
-                    break;
-                  case 1:
-                    document.getElementById('infoPorcentaje').innerHTML = "25% del tiempo";
-                    break;
-                  case 2:
-                    document.getElementById('infoPorcentaje').innerHTML = "50% del tiempo";
-                    break;
-                  case 3:
-                    document.getElementById('infoPorcentaje').innerHTML = "75% del tiempo";
-                    break;
-                  case 4:
-                    document.getElementById('infoPorcentaje').innerHTML = "100% del tiempo";
-                    break;
-                }
+                console.log(position);
+                if (position == 0) document.getElementById('infoPorcentaje').innerHTML = "0%";
+                else if (position == 1) document.getElementById('infoPorcentaje').innerHTML = "25%";
+                else if (position == 2) document.getElementById('infoPorcentaje').innerHTML = "50%";
+                else if (position == 3) document.getElementById('infoPorcentaje').innerHTML = "75%";
+                else if (position == 4) document.getElementById('infoPorcentaje').innerHTML = "100%";
+                else console.log(position);
+
                 var max = obtenMayor();
                 var aColor = parseInt(calculaColor(max, parseFloat(finalScales[0][$(this).val()])));
                 var bColor = parseInt(calculaColor(max, parseFloat(finalScales[1][$(this).val()])));
                 var cColor = parseInt(calculaColor(max, parseFloat(finalScales[2][$(this).val()])));
 
-                /*
-                var aColor = parseInt(calculaColor(max, parseFloat(data[0].m0)));
-                var bColor = parseInt(calculaColor(max, parseFloat(data[1].m0)));
-                var cColor = parseInt(calculaColor(max, parseFloat(data[2].m0)));
-                */
                 var circuloA = document.getElementById("Circulo_A");
                 var circuloB = document.getElementById("Circulo_B");
                 var circuloC = document.getElementById("Circulo_C");
@@ -276,7 +263,9 @@
                 circuloB.style.fill = "rgb(" + bColor + "," + bColor + "," + bColor + ")";
                 circuloC.style.fill = "rgb(" + cColor + "," + cColor + "," + cColor + ")";
 
-                document.getElementById(("colorRange")).classList.remove("hidden");
+                document.getElementById("colorRange").classList.remove("hidden");
+                document.getElementById("leyendaPorcentaje").classList.remove("hidden");
+                document.getElementById('infoPorcentaje').classList.remove("hidden");
               });
 
 
@@ -289,6 +278,7 @@
                 document.getElementById("genera-animacion").classList.add('hidden');
                 document.getElementById("name_1").innerHTML = "A";
                 document.getElementById('time2').removeAttribute("disabled");
+                document.getElementById('')
 
                 for(var i = 0; i < 3; i++){
                   Plotly.deleteTraces('plot-transversal', 0);
@@ -305,6 +295,12 @@
                 document.getElementById("M0_2").value = "";
                 document.getElementById("T1").value = "";
                 document.getElementById("time2").value = "";
+
+                document.getElementById("colorRange").classList.add("hidden");
+                document.getElementById("leyendaPorcentaje").classList.add("hidden");
+                document.getElementById('infoPorcentaje').classList.add("hidden");
+                document.getElementById("infoPorcentaje").innerHTML = "50%";
+                document.getElementById("colorRange").value = 2;
 
               });
 
